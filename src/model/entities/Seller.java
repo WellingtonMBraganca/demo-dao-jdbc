@@ -13,6 +13,23 @@ public class Seller implements Serializable {
 
     private Department depaartment;
 
+    /**
+     * Calculates the sum of two integers.
+     *
+     * <p>This method takes two integer parameters and returns their sum.
+     * It does not perform any overflow checks.</p>
+     *
+     * @param a the first integer to add
+     * @param b the second integer to add
+     * @return the sum of {@code a} and {@code b}
+     * @example <pre>
+     * int result = add(5, 3); // result = 8
+     * </pre>
+     */
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
     public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department depaartment) {
         this.id = id;
         this.name = name;
