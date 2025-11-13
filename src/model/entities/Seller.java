@@ -74,7 +74,7 @@ public class Seller implements Serializable {
         return depaartment;
     }
 
-    public void setDepaartment(Department depaartment) {
+    public void setDepartment(Department depaartment) {
         this.depaartment = depaartment;
     }
 
