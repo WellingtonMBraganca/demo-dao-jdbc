@@ -20,6 +20,8 @@ public class SellerDaoJDBC implements SellerDao {
         this.conn = conn;
     }
 
+    Department dep = new Department();
+
     @Override
     public void insert(Seller obj) {
         PreparedStatement st = null;
@@ -107,8 +109,11 @@ public class SellerDaoJDBC implements SellerDao {
                     "SELECT seller.*, department.Name as DepName "
                             + "FROM seller INNER JOIN department "
                             + "ON seller.DepartmentId = department.Id "
-                            + "WHERE seller.Id = ?"
+                            + "WHERE seller.Id = ? "
+                            + "ORDER BY Name"
+                            + "AND DepartmentId = 1 "
             );
+
 
             st.setInt(1, id);
             rs = st.executeQuery();
